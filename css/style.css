@@ -1,0 +1,332 @@
+:root {
+  --button-hover-main-color: rgb(58, 113, 215);
+  --button-normal-green-color: #518151;
+  --button-hover-green-color: #304d30;
+  --button-normal-red-color: #d60c34;
+  --button-hover-red-color: #ba1939;
+  --button-hover-blue-color: rgb(58, 113, 215);
+  --background-color: rgb(238, 243, 254);
+  --backgrounf-white: rgb(255, 255, 255);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+body,
+input,
+button {
+  font-family: "Open Sans", sans-serif;
+}
+
+input,
+button {
+  font-size: 16px;
+}
+
+.head_bar {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: cornflowerblue;
+  color: white;
+}
+
+main {
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+}
+
+.input_section {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: var(--backgrounf-white);
+}
+
+.input_section > h2 {
+  text-align: center;
+  color: cornflowerblue;
+}
+
+.input_section > form > .input {
+  margin: 8px 0;
+}
+
+.input_section > form > button {
+  background-color: cornflowerblue;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  cursor: pointer;
+}
+
+/* Tambahan untuk mengubah warna tombol submit saat di-hover */
+.input_section > form > button:hover {
+  background-color: var(--button-hover-main-color);
+}
+
+.input_section > form > button > span {
+  font-weight: bold;
+}
+
+.input_section > form > .input > input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.input_section > form > .input > label {
+  color: cornflowerblue;
+  font-weight: bold;
+}
+
+.input_section > form > .input_inline {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+}
+
+.input_section > form > .input_inline > label {
+  color: cornflowerblue;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.search_area {
+  margin: 0 0 0 16px;
+  width: 100%;
+}
+
+.search_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: var(--backgrounf-white);
+}
+
+.search_section > h2 {
+  color: cornflowerblue;
+}
+
+.search_section > form {
+  padding: 16px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr 0.5fr;
+  grid-gap: 10px;
+}
+
+.search_section > form > label {
+  display: flex;
+  align-items: center;
+}
+
+.search_section > form > input {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.search_section > form > button {
+  background-color: cornflowerblue;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Tambahan untuk mengubah warna tombol cari saat di-hover */
+.search_section > form > button:hover {
+  background-color: var(--button-hover-main-color);
+}
+
+.book_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: auto;
+}
+
+.space {
+  width: 32px;
+}
+
+.book_shelf {
+  width: 100%;
+  margin: 16px 0 0 0;
+  border: 1px solid black;
+  padding: 16px;
+  border-radius: 10px;
+  background-color: var(--backgrounf-white);
+}
+
+.book_shelf > h2 {
+  color: cornflowerblue;
+}
+
+.book_shelf > .book_list {
+  padding: 16px;
+}
+
+.book_shelf > .book_list > .book_item {
+  padding: 8px 16px 16px 16px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.book_shelf > .book_list > .book_item > h3,
+p {
+  margin: 8px 0;
+}
+
+.book_shelf > .book_list > .book_item > .action > button {
+  border: 0;
+  padding: 5px 15px;
+  margin: 0 5px 0 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.book_shelf > .book_list > .book_item > .action > .green {
+  background-color: var(--button-normal-green-color);
+  color: white;
+}
+
+.book_shelf > .book_list > .book_item > .action > .green:hover {
+  background-color: var(--button-hover-green-color);
+}
+
+.book_shelf > .book_list > .book_item > .action > .red {
+  background-color: var(--button-normal-red-color);
+  color: white;
+}
+
+.book_shelf > .book_list > .book_item > .action > .red:hover {
+  background-color: var(--button-hover-red-color);
+}
+
+.book_shelf > .book_list > .book_item > .action > .blue {
+  background-color: cornflowerblue;
+  color: white;
+}
+
+.book_shelf > .book_list > .book_item > .action > .blue:hover {
+  background-color: var(--button-hover-blue-color);
+}
+
+.popup {
+  display: none; /* Awalnya disembunyikan */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 40px 40px 20px 20px;
+  border: 1px solid #888;
+  width: 300px;
+  text-align: center;
+  position: relative;
+  border-radius: 5px;
+}
+
+.popup-icon {
+  font-size: 40px;
+  color: #ff0000; /* Warna merah atau sesuaikan dengan kebutuhan */
+  position: absolute;
+  top: -20px; /* Posisi di atas konten popup */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.cancelPopup {
+  border: 0;
+  padding: 5px 15px;
+  margin: 15px 0px 15px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: cornflowerblue;
+  color: white;
+}
+
+/* CSS untuk popup */
+.editPopup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.editPopup-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 40px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 300px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.editPopup-item {
+  display: block;
+  width: 100%;
+  padding: 8px 8px 0px 0px;
+  border-radius: 5px;
+}
+
+.editPopup-inline {
+  margin: 12px 0px;
+  display: flex;
+  align-items: center;
+}
+
+.cancelPopup:hover {
+  background-color: var(--button-hover-blue-color);
+}
+
+.confirmPopup {
+  border: 0;
+  padding: 5px 15px;
+  margin: 15px 0px 15px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--button-normal-red-color);
+  color: white;
+}
+
+.confirmPopup:hover {
+  background-color: var(--button-hover-red-color);
+}
